@@ -63,8 +63,7 @@ def check_rain(debug=False):
     time_str = dateutil.parser.parse(rainfall_time).strftime("%Y-%m-%d %H:%M:%S") 
     if raining == "START":
         strs = []
-        strs = ["【start raining】"]
-        strs.append(str(round(rainfall, 1)))
+        strs.append(str(round(rainfall, 1)) + '(mm/h)')
         strs.append(time_str)
         tweet = "【start raining】" + ','.join(strs)
         if debug == False:
